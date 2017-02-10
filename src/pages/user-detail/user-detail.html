@@ -1,0 +1,37 @@
+<!--
+  Generated template for the UserDetail page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ user?.name.first }} {{ user?.name.last }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngIf="user">
+    <img [src]="user.picture.large" height="250"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ user.name.first }} {{ user.name.last }}
+      </ion-card-title>
+      <p>
+        {{ user.location.street }} 
+      </p>
+      <p>
+        {{ user.location.city }} - {{ user.location.state }}
+      </p>
+      <p>
+        Zip Code: {{ user.location.postcode }} 
+      </p>
+      <p>
+        Email: {{ user.email }} 
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Users
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let user of users">
+    <ion-item (click)="goToUserDetail(user)">
+      <ion-avatar item-left>
+        <img src="{{ user.picture.thumbnail }}">
+      </ion-avatar>
+      <h2>{{ user.name.first }} {{ user.name.last }}</h2>
+      <p>{{ user.email }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
